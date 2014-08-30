@@ -1,0 +1,39 @@
+PreCommit:
+  Jscs:
+    enabled: false
+
+  BerksfileCheck:
+    enabled: false
+
+  BundleCheck:
+    enabled: false
+
+  CoffeeLint:
+    enabled: false
+
+  CssLint:
+    enabled: false
+
+  GoLint:
+    enabled: false
+
+  HamlLint:
+    enabled: false
+
+  HardTabs:
+    enabled: false
+
+  Jscs:
+    enabled: false
+
+  JsxHint:
+    enabled: false
+
+  PryBinding:
+    enabled: false
+
+  PythonFlake8:
+    enabled: false
+
+  RailsSchemaUpToDate:
+    enabled: false

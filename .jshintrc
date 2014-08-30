@@ -1,0 +1,31 @@
+{
+  "asi"       : true
+, "browser"   : true
+, "camelcase" : true
+, "curly"     : true
+, "devel"     : true
+, "eqeqeq"    : true
+, "forin"     : true
+, "immed"     : true
+, "jquery"    : true
+, "indent"    : 2
+, "latedef"   : true
+, "laxcomma"  : true
+, "maxparams" : 3
+, "maxlen"    : 80
+, "noarg"     : true
+, "noempty"   : true
+, "nonew"     : true
+, "quotmark"  : "single"
+, "undef"     : true
+, "unused"    : true
+, "strict"    : true
+, "trailing"  : true
+, "white"     : true
+, "globals"   : {
+                  "googletag": true,
+                  "Module": true,
+                  "Caz": true,
+                  "CazAplication": true
+                }
+}

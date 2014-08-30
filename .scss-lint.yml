@@ -1,0 +1,8 @@
+linters:
+  NameFormat:
+    enabled: true
+    convention: BEM
+
+  SelectorDepth:
+    enabled: true
+    max_depth: 2
