@@ -1,0 +1,94 @@
+text_extensions: [ 'coffee', 'css', 'erb', 'haml', 'handlebars', 'hb', 'htm', 'html', 'js', 'less', 'markdown', 'md', 'ms', 'mustache', 'php', 'rb', 'sass', 'slim', 'scss', 'txt', 'xhtml', 'xml' ]
+output_dir: output
+index_filenames: [ 'index.html' ]
+enable_output_diff: false
+prune:
+  auto_prune: true
+  exclude: [ '.git', '.hg', '.svn', 'CVS' ]
+data_sources:
+  -
+    type: filesystem_unified
+    items_root: /
+    layouts_root: /
+    allow_periods_in_identifiers: true
+  -
+    type: static
+    items_root: /static/
+    allow_periods_in_identifiers: true
+
+checks:
+  internal_links:
+    exclude: []
+
+site_name: Casamento de A a Z
+site_slogan: Tudo para os noivos
+base_url: http://casamentodeaaz.com.br
+resize_images: [ '200x200' ]
+# resize_images: [ '200x200', '240x160', '800x250', '800x600' ]
+# google_analytics: UA-XXXXX-X
+# google_search: xxx:xxx
+
+# 200 # Width given, height automagically selected to preserve aspect ratio.
+# x200 # Height given, width automagically selected to preserve aspect ratio.
+# 200x200 # Maximum values of height and width given, aspect ratio preserved.
+# 200x200^ # Minimum values of width and height given, aspect ratio preserved.
+# 200x200! # Width and height emphatically given, original aspect ratio ignored.
+
+social_networks:
+  - name: Facebook
+    link: https://www.facebook.com/
+    app_id: xxxxxx
+    page_id: xxxxxx
+  - name: Twitter
+    link: http://twitter.com/
+    id: user
+
+menu:
+  # - - Moda e Beleza
+  #   - - Acessórios
+  #     - Dia da Noiva
+  #     - Maquiagem
+  #     - Penteados
+  #     - Sapatos
+  #     - Trajes
+  #     - Vestido de Noiva
+  #     - Unhas
+  # - - Preparativos
+  #   - - Alianças
+  #     - Bolos
+  #     - Buquês
+  #     - Comes e Bebês
+  #     - Convites
+  #     - Decoração
+  #     - Detalhes
+  #     - Fotos e Filmagem
+  #     - Lembrancinhas
+  #     - Locais
+  #     - Músicas
+  #     - Orçamento
+  # - - Inspirações
+  #   - - Celebridades
+  #     - Casamentos Reais
+  #     - Curiosidades
+  #     - Eventos
+  #     - Notícias
+  #     - Tendências
+  #     - Tradições
+  #     - Idéias Criativas
+  # - - Para...
+  #   - - Noiva
+  #     - Noivo
+  #     - Fámilia
+  #     - Padrinhos e Madrinhas
+  #     - Damas e Pajens
+  #     - Convidados
+  #     - Fornecedores
+  # - - Fases
+  #   - - Planejamento
+  #     - O Pedido
+  #     - Noivado
+  #     - Chá Cozinha e Chá Bar
+  #     - A Cerimônia
+  #     - Recepção e Festa
+  #     - Lua de Mel
+  #     - A vida de Casado
