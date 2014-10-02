@@ -1,7 +1,10 @@
 source 'https://rubygems.org'
 
+gem 'guard'
+gem 'guard-livereload'
+gem 'guard-nanoc'
+gem 'nanoc'
+gem 'image_optim'
 gem 'overcommit'
 gem 'rubocop'
 gem 'scss-lint'
-gem 'nanoc'
-gem 'image_optim'
