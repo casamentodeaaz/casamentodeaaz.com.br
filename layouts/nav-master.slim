@@ -1,0 +1,11 @@
+nav.nav-master role="navigation" aria-label="Main menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement"
+  ul.nav-master__menu role="menubar"
+    - if @site.config[:menu]
+      - @site.config[:menu].each do |item|
+        li.nav-master__item role="menuitem" aria-haspopup="true" 
+          a.nav-master__link href="/#{toURL item[0]}" #{item[0]}
+          - unless item[1].nil?
+            ul.nav-master__sub-menu role="menu" aria-hidden="true"
+              - item[1].each do |tag|
+                li.nav-master__sub-item role="menuitem"
+                  a.nav-master__sub-link href="/#{toURL tag}" rel="tag" #{tag}

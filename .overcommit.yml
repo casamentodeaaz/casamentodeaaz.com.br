@@ -37,3 +37,8 @@ PreCommit:
 
   RailsSchemaUpToDate:
     enabled: false
+
+  TrailingWhitespace:
+    exclude:
+      - '**/db/structure.sql'
+      - '**/*.slim'

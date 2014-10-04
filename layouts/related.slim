@@ -1,0 +1,23 @@
+ruby:
+  @items_related = []
+  quantity_of_items = 6
+  items_by_tag = quantity_of_items / @item[:tags].length
+
+  @item[:tags].each do |tag|
+    items_tags = items_with_tag tag
+    
+    items_tags.concat items_tags[ 0, items_by_tag ]
+    items_tags = items_tags[ items_tags.index(@item), items_by_tag ]
+    items_tags.delete @item
+    items_tags.uniq!
+
+    @items_related.concat items_tags
+  end
+
+- if @items_related.length > 0
+  section.related
+    h1.related__title Veja +
+    ul.related__list
+      - @items_related.each do |item|
+        li.related__item
+          a.related__link href="/#{item[:url]}" #{item[:title]}  
