@@ -15,9 +15,9 @@
 
 %sprite-sprite {
   @include hide-text;
-  display: block;
-  background-image: url(../../img/sprite.png);
+  background-image: url('../../img/sprite.png');
   background-repeat: no-repeat;
+  display: block;
 }
 
 %sprite-sprite-facebook {

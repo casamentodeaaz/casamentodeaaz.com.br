@@ -96,7 +96,7 @@ route '/sass/*' do
 end
 
 compile '/sass/*' do
-  filter :sass
+  filter :sass, syntax: :scss
   filter :yui_compressor, type: :css
 end
 

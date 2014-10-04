@@ -36,7 +36,6 @@ PreCommit:
     enabled: false
 
   ScssLint:
-    enabled: false
     exclude:
       - 'content/sass/bitters/**/*.scss'
       - 'content/sass/bourbon/**/*.scss'

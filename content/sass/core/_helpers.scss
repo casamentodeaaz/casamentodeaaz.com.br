@@ -1,4 +1,4 @@
-%clear_list {
+%clear-list {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -6,26 +6,26 @@
 
 %sr-only {
   @include size(1);
-  position: absolute;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  clip: rect(0,0,0,0);
   border: 0;
+  clip: rect(0, 0, 0, 0);
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
 
   &:focus {
     @include size(100% auto);
-    top: 0;
-    margin: 0;
-    overflow: auto;
-    clip: auto;
+    background: rgba(255, 255, 255, .9);
     box-shadow: 0 2px 4px #aaa;
+    clip: auto;
+    font-weight: bold;
+    margin: 0;
     outline: none;
-    background: rgba(255,255,255,0.9);
+    overflow: auto;
     padding: 14px;
     text-align: center;
     text-decoration: none;
-    font-weight: bold;
+    top: 0;
     z-index: 1;
   }
 }

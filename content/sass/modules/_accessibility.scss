@@ -4,10 +4,10 @@
 
 .browsehappy {
   background: $primary-color;
-  padding: 20px 10px;
-  margin: 0;
   color: lighten($primary-color, 35%);
   font-size: 1.2em;
+  margin: 0;
+  padding: 20px 10px;
   text-align: center;
 
   &-link {

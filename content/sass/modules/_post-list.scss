@@ -2,20 +2,20 @@
   &__item {
     overflow: hidden;
     padding: 25px 0 35px;
-  }
 
-  &__item + &__item {
-    border-top: solid 1px #e4e4e4;
+    & + & {
+      border-top: solid 1px #e4e4e4;
+    }
   }
 
   &__title {
     font-size: 1.6em;
-    margin: .3em 0 0.1em;
+    margin: .3em 0 .1em;
   }
 
   &__details {
-    font-style: italic;
     color: #999;
+    font-style: italic;
   }
 
   &__details-link {

@@ -1,31 +1,31 @@
-@import "form";
+@import 'form';
 
 ::-webkit-selection {
   background: $primary-color;
-  color:#fff;
-  text-shadow:none;
+  color: #fff;
+  text-shadow: none;
 }
 
 ::-moz-selection {
   background: $primary-color;
-  color:#fff;
-  text-shadow:none;
+  color: #fff;
+  text-shadow: none;
 }
 
 ::selection {
   background: $primary-color;
-  color:#fff;
-  text-shadow:none;
+  color: #fff;
+  text-shadow: none;
 }
 
 body {
-  background: url(/img/body.jpg) repeat;
+  background: url('/img/body.jpg') repeat;
   color: #555;
 }
 
 a {
-  color: $primary-color;
   @include transition (color linear .2s);
+  color: $primary-color;
 }
 
 a:hover,
@@ -34,11 +34,14 @@ a:focus {
   text-decoration: none;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: $font-headline;
   line-height: 1em;
+
   a {
-  	text-decoration: none;
+    text-decoration: none;
   }
 }
 

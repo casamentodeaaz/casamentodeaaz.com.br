@@ -1,13 +1,13 @@
 .header {
   display: inline-block;
-  width: 100%;
   position: relative;
+  width: 100%;
   z-index: 11;
 
   &-logo {
-  	margin: 65px auto 25px;
-  	width: 460px;
-    max-width: 90%
+    margin: 65px auto 25px;
+    max-width: 90%;
+    width: 460px;
   }
 
   &-link {
@@ -15,15 +15,15 @@
   }
 
   .svg &-link {
-    background-image: url(/logo.svg);
+    background-image: url('/logo.svg');
     background-position: 0 0;
     background-size: contain;
-    width: inherit;
     max-width: 100%;
+    width: inherit;
   }
 
   &__nav-social {
-  	@include position(absolute, 15px 0 0 130px);
+    @include position(absolute, 15px 0 0 130px);
 
     @media only screen and (max-width : 727px) {
       @include position(absolute, 15px 0 0 20px);
@@ -31,7 +31,7 @@
   }
 
   &__search {
-  	@include position(absolute, 16px 140px 0 0);
+    @include position(absolute, 16px 140px 0 0);
 
     @media only screen and (max-width : 727px) {
       @include position(absolute, 16px 20px 0 0);

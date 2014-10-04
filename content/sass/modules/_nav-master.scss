@@ -3,22 +3,22 @@
   z-index: 12;
 
   &__menu {
-    @extend %clear_list;
-    background: #fff url(/img/menu.png) repeat-x;
-    min-height: 49px;
+    @extend %clear-list;
+    background: #fff url('/img/menu.png') repeat-x;
     border-radius: 6px 6px 0 0;
+    min-height: 49px;
   }
 
   &__sub-menu {
-    @extend %clear_list;
-    position: absolute;
+    @extend %clear-list;
     background: #fff;
-    padding: 4px;
     border: 1px solid #bbb;
-    box-shadow: 0 0 0 4px rgba(0,0,0,0.094);
     border-radius: 4px;
-    margin-left: 13px;
+    box-shadow: 0 0 0 4px rgba(0, 0, 0, .1);
     display: none;
+    margin-left: 13px;
+    padding: 4px;
+    position: absolute;
   }
 
   &__item {
@@ -30,8 +30,8 @@
     display: inline-block;
     font: 1.2em $font-headline;
     padding: 12px 15px 19px;
-    text-shadow: 0 1px 2px darken($secundary-color, 10%);
     text-decoration: none;
+    text-shadow: 0 1px 2px darken($secundary-color, 10%);
   }
 
   &__link:hover,
@@ -52,17 +52,17 @@
   }
 
   &__sub-link {
+    @include transition (background-color .2s linear);
     color: #666;
     display: block;
     font-family: $font-headline;
     padding: 4px 8px;
     text-decoration: none;
-    @include transition (background-color .2s linear);
   }
 
   &__sub-link:hover,
   &__sub-link:focus {
-    background: url(/img/dashed.png) $secundary-color;
+    background: url('/img/dashed.png') $secundary-color;
     color: #fff;
   }
 }
