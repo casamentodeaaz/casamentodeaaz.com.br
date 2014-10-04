@@ -12,7 +12,7 @@ module Nanoc
       # @param [String] filename The filename to compress
       # @param [Hash] params Passed through to ImageOptim.new
       # @return [void]
-      def run(content)
+      def run(content, _params = {})
         compressor = HtmlCompressor::Compressor.new
         compressor.compress(content)
       end

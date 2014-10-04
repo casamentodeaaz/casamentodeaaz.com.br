@@ -19,7 +19,7 @@ preprocess do
     @items << Nanoc3::Item.new(
       "== render 'post-list', itemsList: items_with_tag('#{tag}')",
       { extension: 'html', is_hidden: true, priority: 0.3 },
-      "/tags/#{toURL(tag)}/"
+      "/tags/#{to_url(tag)}/"
     )
   end
 
@@ -134,28 +134,8 @@ route '/articles/*' do
   '/' + item[:url]  + '/index.html'
 end
 
-route '/tags/*' do
-  item.identifier[5..-1] + 'index.html'
-end
-
-route '*' do
-  if item.binary?
-    item.identifier.chop + '.' + item[:extension]
-  else
-    item.identifier + 'index.html'
-  end
-end
-
-#########################
-# Pages
-#########################
-
-route '/articles/*' do
-  '/' + item[:url]  + '/index.html'
-end
-
 compile '/articles/*' do
-  filter :slim # , pretty: true
+  filter :slim
   filter :html_compressor
   layout 'article'
 end
@@ -165,7 +145,7 @@ route '/tags/*' do
 end
 
 compile '/tags/*' do
-  filter :slim # , pretty: true
+  filter :slim
   filter :html_compressor
   layout 'default'
 end
@@ -181,10 +161,10 @@ end
 compile '*' do
   if item.binary?
   else
-    filter :slim # , pretty: true
+    filter :slim
     filter :html_compressor
     layout 'default'
   end
 end
 
-layout '*', :slim # , pretty: true
+layout '*', :slim
