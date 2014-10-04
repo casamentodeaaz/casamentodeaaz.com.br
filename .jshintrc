@@ -12,7 +12,7 @@
 , "latedef"   : true
 , "laxcomma"  : true
 , "maxparams" : 3
-, "maxlen"    : 80
+, "maxlen"    : 180 /* temp */
 , "noarg"     : true
 , "noempty"   : true
 , "nonew"     : true
@@ -23,9 +23,9 @@
 , "trailing"  : true
 , "white"     : true
 , "globals"   : {
-                  "googletag": true,
-                  "Module": true,
-                  "Caz": true,
-                  "CazAplication": true
-                }
+    "googletag": true,
+    "Module": true,
+    "Caz": true,
+    "CazApplication": true
+  }
 }

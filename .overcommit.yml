@@ -23,6 +23,13 @@ PreCommit:
   Jscs:
     enabled: false
 
+  JsHint:
+    exclude:
+      - '**/db/structure.sql'
+      - '**/*.slim'
+      - 'content/js/_jquery.js'
+      - 'content/js/_module.js'
+
   JsxHint:
     enabled: false
 

@@ -5,7 +5,7 @@ module Nanoc
     class Concat < Nanoc::Filter
       identifier :concat
 
-      def run(content)
+      def run(content, _params = {})
         imports_items = []
         content = content.gsub(%r{^//=\s*require\s*([^\s]*)$}) do
           # Find directory for this item
