@@ -1,7 +1,4 @@
 PreCommit:
-  Jscs:
-    enabled: false
-
   BerksfileCheck:
     enabled: false
 
@@ -38,7 +35,17 @@ PreCommit:
   RailsSchemaUpToDate:
     enabled: false
 
+  ScssLint:
+    enabled: false
+    exclude:
+      - 'content/sass/bitters/**/*.scss'
+      - 'content/sass/bourbon/**/*.scss'
+      - 'content/sass/neat/**/*.scss'
+
   TrailingWhitespace:
     exclude:
       - '**/db/structure.sql'
       - '**/*.slim'
+      - 'content/sass/bitters/**/*.scss'
+      - 'content/sass/bourbon/**/*.scss'
+      - 'content/sass/neat/**/*.scss'

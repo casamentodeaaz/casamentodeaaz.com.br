@@ -1,0 +1,40 @@
+.article {
+  display: inline-block;
+  line-height: 1.3em;
+  margin-top: 1.5em;
+
+  &__title {
+    font-size: 2.8em;
+    margin: .2em 0 0.1em;
+  }
+
+  &__description {
+    font-style: italic;
+    font-weight: 300;
+    color: #999;
+    padding-bottom: .8em;
+    margin-bottom: 0;
+    border-bottom: 1px solid #eee;
+    line-height: 1.2em;
+  }
+
+  &__details {
+    font-size: .9em;
+    font-style: italic;
+    color: #666;
+    padding: 6px;
+    min-height: 20px;
+    background-color: #fafafa;
+    background-image: url(/img/dashed.png);
+    margin: 1px 0;
+  }
+
+  &__details-link {
+    color: #666;
+  }
+
+  &__details-link:hover {
+    color: #666;
+    text-decoration: none;
+  }
+}

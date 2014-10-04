@@ -1,0 +1,43 @@
+.post-list {
+  &__item {
+    overflow: hidden;
+    padding: 25px 0 35px;
+  }
+
+  &__item + &__item {
+    border-top: solid 1px #e4e4e4;
+  }
+
+  &__title {
+    font-size: 1.6em;
+    margin: .3em 0 0.1em;
+  }
+
+  &__details {
+    font-style: italic;
+    color: #999;
+  }
+
+  &__details-link {
+    color: #999;
+  }
+
+  &__details-link:hover {
+    color: #666;
+    text-decoration: none;
+  }
+
+  &__description {
+    line-height: 1.4em;
+    margin-bottom: 0;
+  }
+
+  &__read-more {
+    font-family: $font-headline;
+    text-decoration: none;
+  }
+
+  &__read-more:after {
+    content: '...';
+  }
+}
