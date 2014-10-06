@@ -1,0 +1,14 @@
+linters:
+  NameFormat:
+    enabled: true
+    convention: BEM
+
+  SelectorDepth:
+    enabled: true
+    max_depth: 2
+
+  UnnecessaryParentReference:
+    enabled: false
+
+  DuplicateProperty:
+    enabled: false

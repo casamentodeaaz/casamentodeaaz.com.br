@@ -1,0 +1,17 @@
+{
+  "name": "casamentodeaaz.com.br",
+  "version": "0.0.0",
+  "description": "Site casamentodeaaz.com.br",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/casamentodeaaz/casamentodeaaz.com.br.git"
+  },
+  "author": "Diego Leme",
+  "bugs": {
+    "url": "https://github.com/casamentodeaaz/casamentodeaaz.com.br/issues"
+  },
+  "homepage": "http://casamentodeaaz.com.br",
+  "scripts": {
+    "preinstall": "npm i -g jshint svgo"
+  }
+}

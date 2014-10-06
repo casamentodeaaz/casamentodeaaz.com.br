@@ -1,0 +1,5 @@
+- if @site.config[:social_networks]
+  ul.nav-social class="#{@css_class}"
+    - @site.config[:social_networks].each do |item|
+      li class="nav-social__item"
+        a class="nav-social__link_type_#{item[:name].downcase}" href="#{item[:link]}" target="_blank" #{item[:name]}

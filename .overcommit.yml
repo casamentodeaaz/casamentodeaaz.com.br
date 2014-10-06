@@ -1,0 +1,57 @@
+PreCommit:
+  BerksfileCheck:
+    enabled: false
+
+  BundleCheck:
+    enabled: false
+
+  CoffeeLint:
+    enabled: false
+
+  CssLint:
+    enabled: false
+
+  GoLint:
+    enabled: false
+
+  HamlLint:
+    enabled: false
+
+  HardTabs:
+    enabled: false
+
+  Jscs:
+    enabled: false
+
+  JsHint:
+    exclude:
+      - '**/db/structure.sql'
+      - '**/*.slim'
+      - 'content/js/_jquery.js'
+      - 'content/js/_module.js'
+
+  JsxHint:
+    enabled: false
+
+  PryBinding:
+    enabled: false
+
+  PythonFlake8:
+    enabled: false
+
+  RailsSchemaUpToDate:
+    enabled: false
+
+  ScssLint:
+    exclude:
+      - 'content/sass/bitters/**/*.scss'
+      - 'content/sass/bourbon/**/*.scss'
+      - 'content/sass/neat/**/*.scss'
+
+  TrailingWhitespace:
+    exclude:
+      - '**/db/structure.sql'
+      - '**/*.slim'
+      - 'content/sass/bitters/**/*.scss'
+      - 'content/sass/bourbon/**/*.scss'
+      - 'content/sass/neat/**/*.scss'

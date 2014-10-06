@@ -1,0 +1,23 @@
+ruby:
+	if @itemsList.nil?
+		@itemsList = sorted_articles
+	end
+
+div.post-list
+ 	- @itemsList.each do |item|
+		article.post-list__item
+            == render 'tags', :tags =>item[:tags]
+			h1.post-list__title
+				a.post-list__title-link href="/#{item[:url]}" #{item[:title]}
+			small.post-list__details
+				| #{item[:author_name]} • Criado em 
+				time datetime="#{item[:created_at]}" pubdate="" #{date_format item[:created_at]}
+				- unless item[:updated_at].nil?
+					|  e atualizado em 
+					time datetime="#{item[:updated_at]}" update="" #{date_format item[:updated_at]}
+				|  • 
+				a.post-list__details-link href="/#{item[:url]}#disqus_thread" Comentários
+			/ a href="/#{item[:url]}"
+			/ 	== render 'img', :id => 1, :size => '240x160'
+			p.post-list__description #{item[:excerpt]}
+			a.post-list__read-more href="/#{item[:url]}" Leia mais

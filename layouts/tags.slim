@@ -1,0 +1,4 @@
+ul.tags
+	- @tags.each do |tag|
+		li.tags-item
+			a.tags-link href="/#{to_url tag}" rel="tag" #{tag}

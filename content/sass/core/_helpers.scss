@@ -1,0 +1,31 @@
+%clear-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+%sr-only {
+  @include size(1);
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+
+  &:focus {
+    @include size(100% auto);
+    background: rgba(255, 255, 255, .9);
+    box-shadow: 0 2px 4px #aaa;
+    clip: auto;
+    font-weight: bold;
+    margin: 0;
+    outline: none;
+    overflow: auto;
+    padding: 14px;
+    text-align: center;
+    text-decoration: none;
+    top: 0;
+    z-index: 1;
+  }
+}

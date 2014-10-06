@@ -1,0 +1,40 @@
+.header {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  z-index: 11;
+
+  &-logo {
+    margin: 65px auto 25px;
+    max-width: 90%;
+    width: 460px;
+  }
+
+  &-link {
+    @extend %sprite-sprite-logo;
+  }
+
+  .svg &-link {
+    background-image: url('/logo.svg');
+    background-position: 0 0;
+    background-size: contain;
+    max-width: 100%;
+    width: inherit;
+  }
+
+  &__nav-social {
+    @include position(absolute, 15px 0 0 130px);
+
+    @media only screen and (max-width : 727px) {
+      @include position(absolute, 15px 0 0 20px);
+    }
+  }
+
+  &__search {
+    @include position(absolute, 16px 140px 0 0);
+
+    @media only screen and (max-width : 727px) {
+      @include position(absolute, 16px 20px 0 0);
+    }
+  }
+}

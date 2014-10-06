@@ -1,0 +1,20 @@
+$social-items: facebook gplus pinterest rss twitter;
+
+.nav-social {
+  @extend %clear-list;
+
+  &__item {
+    float: left;
+
+    + .nav-social__item {
+      margin-left: 4px;
+    }
+  }
+
+  @each $item in $social-items {
+    &__link_type_#{$item} {
+      @extend %sprite-sprite-#{$item};
+    }
+  }
+
+}

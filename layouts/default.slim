@@ -1,0 +1,27 @@
+doctype 5
+html lang="pt-BR" class="no-js"
+  
+  == render 'head'
+
+  body.l-default role="document" itemscope="" itemtype="http://schema.org/WebPage" itemref="copyright"
+   
+    #fb-root
+    == render 'accessibility'
+    == render 'noivos'
+
+    .full-content
+
+      == render 'header'
+      == render 'nav-master'
+
+      div#main-block
+        main#main role="main" itemprop="mainContentOfPage" itemscope="" itemtype="http://schema.org/WebPageElement"
+          == yield
+        aside 
+          #div-gpt-ad-1391116309662-0.ads-300x600
+
+      #div-gpt-ad-1391116309662-1.ads-728x90
+
+    == render 'footer'
+
+    script src="/js/end.js"

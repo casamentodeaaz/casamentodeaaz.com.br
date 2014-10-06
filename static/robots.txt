@@ -1,0 +1,10 @@
+# www.robotstxt.org/
+
+# Allow crawling of all content
+User-agent: *
+Disallow: /search-results/
+Disallow: /img/
+Disallow: /imagens/200x200/
+Disallow: /imagens/240x160/
+Disallow: /imagens/800x250/
+Disallow: /imagens/800x600/
