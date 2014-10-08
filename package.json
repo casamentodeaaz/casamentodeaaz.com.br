@@ -12,6 +12,6 @@
   },
   "homepage": "http://casamentodeaaz.com.br",
   "scripts": {
-    "preinstall": "npm i -g jshint svgo"
+    "preinstall": "sudo npm i -g jshint svgo"
   }
 }
