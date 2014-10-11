@@ -43,12 +43,13 @@ aside {
     z-index: inherit;
   }
 
-  .fixed {
+  &.fixed {
     position: fixed;
   }
 
-  .align-bottom {
+  &.align-bottom {
     bottom: 0;
+    position: absolute;
     top: inherit;
   }
 }
