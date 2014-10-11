@@ -4,9 +4,13 @@
 
   &__menu {
     @extend %clear-list;
-    background: #fff url('/img/menu.png') repeat-x;
+    background: #fff repeat-x url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAxCAIAAACd5vQJAAABM0lEQVQ4y01SOXIEIQwELYif+sN+gQMHLgfebDkWZB2IGYpg6Gm1Wkf8+PwKeuboj4wQ/PDjPXr6/ns+cj4oQM5zDArBLgQiSGn1zh/ybXB0VpKXRabMLJi9k1EDMUv0Vh/BBUHhdFiwYWcll9MUrHcyS3LWC0lgR8yfBHdLIPWttYP1PytF9ZdR/L1bIz/mD6cEexWkerN1o4ClOXqJcxCZntUrTHkbCwAFJrrpSXBra209PssgeVutMo+CrAVz+7MqkPVwtebjUD8RUVla/6nEWNd8hVUvPc2K+ehd/phZVm1XP/lGYxHd5qEQGHxYELKa2QZJ58HM2nxfSPelbFbSVmlmzcp6VRpj+1IQzMxtX9TffHH/bB/DCsqkXsXf2b9YCntLr98fKOV0FWJmuJLr/QP701TqKaeGuAAAAABJRU5ErkJggg==);
     border-radius: 6px 6px 0 0;
     min-height: 49px;
+
+    .no-datauri & {
+      background-image: url('/img/menu.png');
+    }
   }
 
   &__sub-menu {
@@ -62,8 +66,12 @@
 
   &__sub-link:hover,
   &__sub-link:focus {
-    background: url('/img/dashed.png') $secundary-color;
+    background: $secundary-color url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAQAAAAnZu5uAAAAD0lEQVQYV2Ng4GBAAsRyAARvACn2Lup8AAAAAElFTkSuQmCC);
     color: #fff;
+
+    .no-datauri & {
+      background-image: url('/img/dashed.png');
+    }
   }
 }
 
