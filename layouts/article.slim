@@ -25,7 +25,7 @@ html lang="pt-BR" class="no-js"
 
             div.article__details
               | Por 
-              a.article__details-link href="#" rel="author" #{@item[:author_name]}
+              a.article__details-link href="https://plus.google.com/u/1/#{@item[:author_uri]}?rel=author" rel="author" target="_blank" #{@item[:author_name]}
               |  • Criado em 
               time datetime="#{@item[:created_at]}" pubdate="" #{date_format @item[:created_at]}
               - unless item[:updated_at].nil?
