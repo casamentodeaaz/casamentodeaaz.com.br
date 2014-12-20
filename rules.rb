@@ -24,7 +24,7 @@ preprocess do
 
   @items.each do |item|
     if formats.include?(item[:extension]) ||
-        item.identifier =~ /404|500|htaccess/
+       item.identifier =~ /404|500|htaccess/
       item[:is_hidden] = true unless item.attributes.key?(:is_hidden)
     end
   end
@@ -37,7 +37,6 @@ preprocess do
 
   config[:nanoc_version_info] = 'nanoc --version'.strip
   config[:gem_version_info]   = 'gem --version'.strip
-
 end
 
 #########################

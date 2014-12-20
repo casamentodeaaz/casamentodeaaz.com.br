@@ -36,7 +36,6 @@ module Nanoc
             # Return content file
             ';' + item.raw_content
           end
-
         end
 
         depend_on(imports_items)
