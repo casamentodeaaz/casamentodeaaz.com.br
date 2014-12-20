@@ -5,7 +5,6 @@
 #########################
 
 preprocess do
-
   config[:tags] = []
   formats = %w(png gif jpg jpeg coffee scss sass less css xml js txt)
 
@@ -118,12 +117,11 @@ end
 #########################
 
 route '/sitemap/' do
-  '/sitemap.xml.gz'
+  '/sitemap.xml'
 end
 
 compile '/sitemap/' do
   filter :erb
-  filter :shellcmd, cmd: 'gzip'
 end
 
 #########################
