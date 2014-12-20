@@ -54,3 +54,11 @@ hr {
   border-bottom: 1px solid #eee;
   margin: 0 0 $gutter-width;
 }
+
+img {
+  max-width: 100%;
+}
+
+figure img {
+  width: 100%;
+}
