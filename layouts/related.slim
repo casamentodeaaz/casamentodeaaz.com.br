@@ -8,11 +8,20 @@ ruby:
     
     items_tags.concat items_tags[ 0, items_by_tag ]
     items_tags = items_tags[ items_tags.index(@item), items_by_tag ]
-    items_tags.delete @item
-    items_tags.uniq!
 
     @items_related.concat items_tags
   end
+  
+  @items_related.delete @item
+  @items_related.uniq!
+  
+  if @items_related.length < quantity_of_items
+    lack = quantity_of_items - @items_related.length - 1
+    @items_related.concat articles[0..lack]
+  end
+  
+  @items_related.delete @item
+  @items_related.uniq!
 
 - if @items_related.length > 0
   section.related
