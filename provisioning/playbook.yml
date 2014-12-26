@@ -1,0 +1,10 @@
+---
+- name: My dev machine setup
+  hosts: default
+  user: vagrant
+  sudo: yes
+
+  roles:
+    - common
+    - nodejs
+    # - ruby
