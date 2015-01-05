@@ -3,14 +3,16 @@ casamentodeaaz.com.br
 
 Site casamentodeaaz.com.br
 
+###Config:
 - git clone
+- vagrant up
+- vagrant ssh
 - bundle
 - npm install
 - overcommit --install
-- sudo apt-get install -y advancecomp gifsicle jhead jpegoptim libjpeg-progs optipng pngcrush pngquant libpng-dev
-- [Install pngout](http://www.reviewboard.com/2014/08/10563/install-pngout-ubuntu-14-04-server/)
 
-Run command: nanoc view | bundle exec guard
+###Run:
+- nanoc view | bundle exec guard
 
 ###Deploy
 - find output -type f -exec gzip -9 {} \; -exec mv {}.gz {} \;
