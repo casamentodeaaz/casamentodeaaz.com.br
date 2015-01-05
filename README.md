@@ -7,9 +7,6 @@ Site casamentodeaaz.com.br
 - git clone
 - vagrant up
 - vagrant ssh
-- bundle
-- npm install
-- overcommit --install
 
 ###Run:
 - nanoc view | bundle exec guard
