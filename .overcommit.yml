@@ -55,3 +55,6 @@ PreCommit:
       - 'content/sass/bitters/**/*.scss'
       - 'content/sass/bourbon/**/*.scss'
       - 'content/sass/neat/**/*.scss'
+
+  TravisLint:
+    enabled: false

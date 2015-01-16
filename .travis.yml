@@ -1,0 +1,30 @@
+language: ruby
+rvm:
+- 2.1.1
+before_install:
+- sudo apt-get update -qq
+- sudo apt-get install -qq build-essential zlib1g-dev libssl-dev libreadline6-dev
+  libyaml-dev libffi-dev default-jre advancecomp gifsicle jhead jpegoptim libjpeg-progs
+  optipng pngcrush pngquant libpng-dev
+- wget http://static.jonof.id.au/dl/kenutils/pngout-20130221-linux.tar.gz
+- tar -xzf pngout-*-linux.tar.gz
+- mv pngout-*-linux pngout-linux
+env:
+  matrix:
+  - PATH=pngout-linux/x86_64:$PATH
+branches:
+  only:
+  - master
+script: bundle exec nanoc
+before_deploy: find output -type f -exec gzip -9 {} \; -exec mv {}.gz {} \;
+deploy:
+  provider: s3
+  access_key_id: AKIAI4RTNTO2YOZ6EHFQ
+  secret_access_key:
+    secure: DzzAXnQFhiH96m6ailUwn8u54ZgXXhrx+YoXbRAhwDMAzHrpAyIUI2UD9Z59+6ujKzaiHruLb072Vfwo1jjWtlJ+zLeptyeAHMjrH7BxifBvKpHzdAYXe9AxI10qOeGOja7xkD0S4CX437++h6T5pr6WDkQRZIcGJyx+iI2LHHk=
+  bucket: casamentodeaaz.com.br
+  local-dir: output
+  detect_encoding: true
+  skip_cleanup: true
+  region: sa-east-1
+  endpoint: casamentodeaaz.com.br.s3-website-sa-east-1.amazonaws.com
