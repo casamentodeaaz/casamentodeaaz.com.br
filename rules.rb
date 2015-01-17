@@ -132,7 +132,9 @@ route '/articles/*' do
 end
 
 compile '/articles/*' do
-  filter :slim
+  filter :slim if item[:extension] == 'slim'
+  filter :redcarpet if %w{markdown mdown mkdn md}.include? 'md'
+  filter :erb
   filter :html_compressor
   layout 'article'
 end
