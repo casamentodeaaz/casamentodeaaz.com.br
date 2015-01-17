@@ -18,6 +18,7 @@ branches:
 script: bundle exec nanoc
 before_deploy: find output -type f -exec gzip -9 {} \; -exec mv {}.gz {} \;
 deploy:
+  edge: true
   provider: s3
   access_key_id: AKIAI4RTNTO2YOZ6EHFQ
   secret_access_key:
@@ -28,3 +29,4 @@ deploy:
   skip_cleanup: true
   region: sa-east-1
   endpoint: casamentodeaaz.com.br.s3-website-sa-east-1.amazonaws.com
+  cache_control: max-age=604800
